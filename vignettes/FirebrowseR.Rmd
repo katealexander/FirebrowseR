@@ -103,9 +103,9 @@ while(all.Found == F){
                                              page_size = page.Size,
                                              page = page.Counter)
   if(nrow(mRNA.Exp[[page.Counter]]) < page.Size)
-    all.Found = T
-  else
     page.Counter = page.Counter + 1
+  else
+    all.Found = T
 }
 mRNA.Exp = do.call(rbind, mRNA.Exp)
 dim(mRNA.Exp)
